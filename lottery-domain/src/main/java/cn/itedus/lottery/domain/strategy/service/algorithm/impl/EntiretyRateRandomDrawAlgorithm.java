@@ -2,11 +2,8 @@ package cn.itedus.lottery.domain.strategy.service.algorithm.impl;
 
 import cn.itedus.lottery.domain.strategy.model.vo.AwardRateInfo;
 import cn.itedus.lottery.domain.strategy.service.algorithm.BaseAlgorithm;
-import cn.itedus.lottery.infrastructure.dao.IStrategyDetailDao;
-import cn.itedus.lottery.infrastructure.po.StrategyDetail;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,9 +17,6 @@ import java.util.List;
 @Component("entiretyRateRandomDrawAlgorithm")
 public class EntiretyRateRandomDrawAlgorithm extends BaseAlgorithm {
 
-    @Resource
-    private IStrategyDetailDao strategyDetailDao;
-
     @Override
     public String randomDraw(Long strategyId, List<String> excludeAwardIds) {
 
@@ -30,14 +24,6 @@ public class EntiretyRateRandomDrawAlgorithm extends BaseAlgorithm {
 
         // 排除掉不在抽奖范围的奖品ID集合
         List<AwardRateInfo> differenceAwardRateList = new ArrayList<>();
-        // InfoMap 目前是空的 以下部分是自己添加的
-        List<StrategyDetail> strategyDetails = strategyDetailDao.queryStrategyDetailList(strategyId);
-        List<AwardRateInfo> awardRateInfoList = new ArrayList<>();
-        for(StrategyDetail s: strategyDetails) {
-            awardRateInfoList.add(new AwardRateInfo(s.getAwardId(), s.getAwardRate()));
-        }
-        awardRateInfoMap.put(strategyId, awardRateInfoList);
-
         List<AwardRateInfo> awardRateIntervalValList = awardRateInfoMap.get(strategyId);
         for (AwardRateInfo awardRateInfo : awardRateIntervalValList) {
             String awardId = awardRateInfo.getAwardId();
