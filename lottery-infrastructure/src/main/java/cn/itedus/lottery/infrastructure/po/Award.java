@@ -22,7 +22,7 @@ public class Award {
     private Integer awardCount;
 
     // 奖品名称
-    private String awardName;
+    private String awardDesc;
 
     // 奖品内容「文字描述、Key、码」
     private String awardContent;
@@ -66,11 +66,11 @@ public class Award {
     }
 
     public String getAwardName() {
-        return awardName;
+        return awardDesc;
     }
 
     public void setAwardName(String awardName) {
-        this.awardName = awardName;
+        this.awardDesc = awardName;
     }
 
     public String getAwardContent() {
