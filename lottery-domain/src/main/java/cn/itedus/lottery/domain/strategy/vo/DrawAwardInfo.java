@@ -1,4 +1,4 @@
-package cn.itedus.lottery.domain.strategy.model.vo;
+package cn.itedus.lottery.domain.strategy.vo;
 
 /**
  * @description: 中奖奖品信息
@@ -31,7 +31,7 @@ public class DrawAwardInfo {
     public DrawAwardInfo() {
     }
 
-    public DrawAwardInfo(String awardId, Integer awardType, String awardName, String awardContent) {
+    public DrawAwardInfo(String awardId, Integer awardType, String awardName,String awardContent) {
         this.awardId = awardId;
         this.awardType = awardType;
         this.awardName = awardName;
