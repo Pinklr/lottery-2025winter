@@ -1,5 +1,8 @@
 package cn.itedus.lottery.domain.activity.service.partake;
 
+import cn.itedus.lottery.domain.activity.model.req.PartakeReq;
+import cn.itedus.lottery.domain.activity.model.res.PartakeResult;
+
 /**
  * @description: 抽奖活动参与接口
  * @author: 小傅哥，微信：fustack
@@ -12,6 +15,6 @@ public interface IActivityPartake {
     /**
      * TODO：待开发活动参与接口
      */
-    void doPartake();
+    PartakeResult doPartake(PartakeReq req);
 
 }
