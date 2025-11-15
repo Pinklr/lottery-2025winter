@@ -22,6 +22,7 @@
       <module name="lottery-2025winter" options="-parameters" />
       <module name="lottery-application" options="-parameters" />
       <module name="lottery-common" options="-parameters" />
+      <module name="lottery-domain" options="-parameters" />
       <module name="lottery-infrastructure" options="-parameters" />
       <module name="lottery-interfaces" options="-parameters" />
       <module name="lottery-rpc" options="-parameters" />
