@@ -9,7 +9,6 @@ import cn.itedus.lottery.domain.activity.model.vo.UserTakeActivityVO;
 import cn.itedus.lottery.domain.activity.repository.IActivityRepository;
 import cn.itedus.lottery.domain.activity.repository.IUserTakeActivityRepository;
 import cn.itedus.lottery.domain.activity.service.partake.BaseActivityPartake;
-import cn.itedus.lottery.domain.activity.service.partake.IActivityPartake;
 import cn.itedus.lottery.domain.support.ids.IIdGenerator;
 import cn.zly.middleware.db.router.strategy.IDBRouterStrategy;
 import org.slf4j.Logger;
