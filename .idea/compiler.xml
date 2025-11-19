@@ -18,7 +18,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Lottery" options="-parameters" />
+      <module name="Lottery" options="" />
       <module name="lottery-2025winter" options="-parameters" />
       <module name="lottery-application" options="-parameters" />
       <module name="lottery-common" options="-parameters" />

@@ -1,8 +1,3 @@
-import cn.itedus.lottery.rpc.IActivityBooth;
-import cn.itedus.lottery.rpc.req.ActivityReq;
-import cn.itedus.lottery.rpc.res.ActivityRes;
-
-import com.alibaba.fastjson.JSON;
 import org.apache.dubbo.common.logger.LoggerFactory;
 import org.apache.dubbo.config.annotation.Reference;
 import org.junit.Test;
@@ -12,7 +7,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.logging.Logger;
 
-import org.apache.dubbo.config.annotation.Service;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ApiTest {
