@@ -99,4 +99,6 @@ public abstract class BaseActivityPartake implements IActivityPartake {
 
     protected abstract UserTakeActivityVO queryNoConsumedTakeActivityOrder(Long activityId, String uId);
 
+
+
 }

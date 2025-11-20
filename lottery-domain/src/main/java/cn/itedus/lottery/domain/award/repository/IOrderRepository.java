@@ -7,8 +7,16 @@ package cn.itedus.lottery.domain.award.repository;
  * @github: https://github.com/fuzhengwei
  * @Copyright: 公众号：bugstack虫洞栈 | 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
  */
-public interface IAwardRepository {
+public interface IOrderRepository {
 
-    // TODO 对分库分表中的用户中奖纪录操作
+    /**
+     * 更新奖品发放状态
+     *
+     * @param uId               用户ID
+     * @param orderId           订单ID
+     * @param awardId           奖品ID
+     * @param grantState        奖品状态
+     */
+    void updateUserAwardState(String uId, Long orderId, String awardId, Integer grantState);
 
 }

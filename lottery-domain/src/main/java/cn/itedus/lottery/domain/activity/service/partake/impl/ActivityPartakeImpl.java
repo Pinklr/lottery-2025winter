@@ -148,5 +148,9 @@ public class ActivityPartakeImpl extends BaseActivityPartake {
         }
 
     }
+    @Override
+    public void updateInvoiceMqState(String uId, Long orderId, Integer mqState) {
+        userTakeActivityRepository.updateInvoiceMqState(uId, orderId, mqState);
+    }
 
 }
