@@ -1,6 +1,9 @@
 package cn.itedus.lottery.domain.activity.service.deploy;
 
 import cn.itedus.lottery.domain.activity.model.req.ActivityConfigReq;
+import cn.itedus.lottery.domain.activity.model.vo.ActivityVO;
+
+import java.util.List;
 
 /**
  * @description: 部署活动配置接口
@@ -24,5 +27,7 @@ public interface IActivityDeploy {
      * @param req 活动配置信息
      */
     void updateActivity(ActivityConfigReq req);
+
+    List<ActivityVO> scanToDoActivityList(Long id);
 
 }

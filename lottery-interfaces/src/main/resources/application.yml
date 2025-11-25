@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 7778
 
 spring:
   kafka:
@@ -38,6 +38,19 @@ spring:
       #listner负责ack，每调用一次，就立即commit
       ack-mode: manual_immediate
       missing-topics-fatal: false
+
+xxl:
+  job:
+    admin:
+      addresses: http://127.0.0.1:1122/xxl-job-admin
+    executor:
+      address:
+      appname: lottery-job
+      ip:
+      port: 7779
+      logpath: F:/aJava/lottey/xxl-job-2.3.0/xxl-job-2.3.0/data
+      logretentiondays: 50
+    accessToken:
 
 
 
