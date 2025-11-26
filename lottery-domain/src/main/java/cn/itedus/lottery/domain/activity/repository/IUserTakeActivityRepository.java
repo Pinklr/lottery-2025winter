@@ -1,9 +1,11 @@
 package cn.itedus.lottery.domain.activity.repository;
 
 import cn.itedus.lottery.domain.activity.model.vo.DrawOrderVO;
+import cn.itedus.lottery.domain.activity.model.vo.InvoiceVO;
 import cn.itedus.lottery.domain.activity.model.vo.UserTakeActivityVO;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @description: 用户参与活动仓储接口
@@ -68,5 +70,8 @@ public interface IUserTakeActivityRepository {
     UserTakeActivityVO queryNoConsumedTakeActivityOrder(Long activityId, String uId);
 
     void updateInvoiceMqState(String uId, Long orderId, Integer mqState);
+
+
+    List<InvoiceVO> scanInvoiceMqState();
 
 }

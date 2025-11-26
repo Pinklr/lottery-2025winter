@@ -5,6 +5,8 @@ import cn.zly.middleware.db.router.annotation.DBRouter;
 import cn.zly.middleware.db.router.annotation.DBRouterStrategy;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * @description: 用户策略计算结果表DAO
  * @author: 小傅哥，微信：fustack
@@ -44,4 +46,6 @@ public interface IUserStrategyExportDao {
      */
     @DBRouter
     void updateInvoiceMqState(UserStrategyExport userStrategyExport);
+
+    List<UserStrategyExport> scanInvoiceMqState();
 }
